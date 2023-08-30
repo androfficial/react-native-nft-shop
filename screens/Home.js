@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { View, SafeAreaView, FlatList } from 'react-native';
 import { COLORS } from '../themes/theme';
-import { NFTData } from '../constants/dummy';
+import { NFTData } from '../constants/nftData';
 import { FocusedStatusBar } from '../components/FocusedStatusBar';
 import { NFTCard } from '../components/NFTCard';
 import { HomeHeader } from '../components/HomeHeader';
