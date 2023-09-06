@@ -1,6 +1,11 @@
 import { useFonts } from 'expo-font';
 
-export const useAppFonts = () => {
+interface IUseAppFonts {
+  loaded: boolean;
+  error: Error | null;
+}
+
+export const useAppFonts = (): IUseAppFonts => {
   const [loaded, error] = useFonts({
     InterBold: require('../assets/fonts/Inter-Bold.ttf'),
     InterSemiBold: require('../assets/fonts/Inter-SemiBold.ttf'),

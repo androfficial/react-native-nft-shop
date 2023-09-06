@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import { View, SafeAreaView, FlatList } from 'react-native';
 import { COLORS } from '../themes/theme';
-import { NFTData } from '../constants/nftData';
+import { INFTData, NFTData } from '../constants/nftData';
 import { FocusedStatusBar } from '../components/FocusedStatusBar';
 import { NFTCard } from '../components/NFTCard';
 import { HomeHeader } from '../components/HomeHeader';
 
-const Home = () => {
-  const [nftData, setNftData] = useState(NFTData);
+const Home = (): JSX.Element => {
+  const [nftData, setNftData] = useState<INFTData[]>(NFTData);
 
-  const handleSearch = (value) => {
+  const handleSearch = (value: string): void => {
     if (value.length === 0) {
       setNftData(NFTData);
     }

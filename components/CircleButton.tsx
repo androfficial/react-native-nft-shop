@@ -1,7 +1,22 @@
-import { TouchableOpacity, Image } from 'react-native';
+import { FC } from 'react';
+import {
+  TouchableOpacity,
+  Image,
+  GestureResponderEvent,
+  ImageSourcePropType,
+} from 'react-native';
 import { COLORS, SIZES, SHADOWS } from '../themes/theme';
 
-export const CircleButton = ({ imgUrl, handlePress, ...props }) => {
+interface ICircleButton {
+  imgUrl: ImageSourcePropType;
+  handlePress: (event: GestureResponderEvent) => void;
+}
+
+export const CircleButton: FC<ICircleButton> = ({
+  imgUrl,
+  handlePress,
+  ...props
+}): JSX.Element => {
   return (
     <TouchableOpacity
       style={{

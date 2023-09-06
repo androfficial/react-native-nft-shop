@@ -7,7 +7,7 @@ import Details from './screens/Details';
 
 const Stack = createStackNavigator();
 
-const App = () => {
+const App = (): JSX.Element | null => {
   const { loaded, error } = useAppFonts();
 
   if (!loaded || error) return null;

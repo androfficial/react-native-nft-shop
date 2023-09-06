@@ -8,7 +8,7 @@ import { DetailsBid } from '../components/DetailsBid';
 import { SubInfo } from '../components/SubInfo';
 import { DetailsDesc } from '../components/DetailsDesc';
 
-const Details = ({ route, navigation }) => {
+const Details = ({ route, navigation }): JSX.Element => {
   const { data } = route.params;
 
   return (
